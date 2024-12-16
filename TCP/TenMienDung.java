@@ -24,7 +24,7 @@ public class TenMienDung {
             }
         }
         for (int i = 0 ; i < arr.size()-1; i ++) res += arr.get(i) + ", ";
-        res += arr.getLast();
+        res += arr.get(arr.size()-1);
         System.out.println(res);
         out.write(res);
         out.newLine();

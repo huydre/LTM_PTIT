@@ -1,6 +1,5 @@
 package RMI;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 public class Book implements Serializable {
