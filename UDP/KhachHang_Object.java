@@ -28,7 +28,7 @@ public class KhachHang_Object {
         ByteArrayInputStream bais = new ByteArrayInputStream(dpNhan.getData(), 8, dpNhan.getLength());
         ObjectInputStream ois = new ObjectInputStream(bais);
         Customer customer = (Customer) ois.readObject();
-        System.out.println(customer.getName());
+        System.out.println(customer);
 
         //Xu ly ho ten
         String[] name = customer.getName().split("\\s+");

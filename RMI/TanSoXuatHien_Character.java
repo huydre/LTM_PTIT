@@ -11,6 +11,7 @@ public class TanSoXuatHien_Character {
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
         String s = sv.requestCharacter("B21DCCN093", "Z2QYoqU5");
         System.out.println(s);
+
         LinkedHashMap<Character, Integer> map = new LinkedHashMap<Character, Integer>();
         for (Character x: s.toCharArray()) {
             int cnt = 1;

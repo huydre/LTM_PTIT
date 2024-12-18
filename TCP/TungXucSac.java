@@ -7,11 +7,11 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class TungXucSac {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         Socket socket = new Socket("203.162.10.109",2206 );
         DataInputStream in = new DataInputStream(socket.getInputStream());
         DataOutputStream out = new DataOutputStream(socket.getOutputStream());
-        String code = "B21DCCN123;PpWEQ6F0";
+        String code = "B21DCCN123;DDKJG8E4";
         out.writeUTF(code);
         out.flush();
         int n = in.readInt();

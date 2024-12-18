@@ -11,7 +11,7 @@ public class LonThuHai {
         Socket socket = new Socket("203.162.10.109",2206 );
         InputStream in = socket.getInputStream();
         OutputStream out = socket.getOutputStream();
-        String code = "B21DCCN123;4XNRzWzl";
+        String code = "B21DCCN076;g7IEDtgZ";
         out.write(code.getBytes());
         out.flush();
         byte[] buffer = new byte[1024];
@@ -24,8 +24,15 @@ public class LonThuHai {
         for (String x: a) n.add(Integer.parseInt(x));
         Collections.sort(n);
         int res = n.get(n.size()-2);
-        System.out.println(res);
-        out.write(String.valueOf(res).getBytes());
+        int pos = 0;
+        for (int i = 0 ; i < a.length ; i++) {
+            if (res == Integer.parseInt(a[i])) {
+                pos = i;
+            }
+        }
+        String result = res + "," + pos;
+        System.out.println(result);
+        out.write(String.valueOf(result).getBytes());
         out.flush();
         in.close();
         socket.close();
